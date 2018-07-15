@@ -19,6 +19,8 @@
 		49B9914020FBF2BB0086FD01 /* Parakeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913F20FBF2BB0086FD01 /* Parakeet.swift */; };
 		49B9914220FBF3280086FD01 /* Ferret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914120FBF3280086FD01 /* Ferret.swift */; };
 		49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914420FBF3660086FD01 /* AnimalFactory.swift */; };
+		49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */; };
+		49B9914C20FBFB260086FD01 /* AnimalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914B20FBFB260086FD01 /* AnimalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		49B9913F20FBF2BB0086FD01 /* Parakeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parakeet.swift; sourceTree = "<group>"; };
 		49B9914120FBF3280086FD01 /* Ferret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ferret.swift; sourceTree = "<group>"; };
 		49B9914420FBF3660086FD01 /* AnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactory.swift; sourceTree = "<group>"; };
+		49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimalViewController.swift; sourceTree = "<group>"; };
+		49B9914B20FBFB260086FD01 /* AnimalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +108,27 @@
 		49B9914620FBF38C0086FD01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49B9914A20FBFB120086FD01 /* Cell */,
+				49B9914920FBFB090086FD01 /* DataSource */,
 				49B9913420FBEFCF0086FD01 /* AnimalViewController.swift */,
+				49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49B9914920FBFB090086FD01 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				49B9914B20FBFB260086FD01 /* AnimalDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		49B9914A20FBFB120086FD01 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */,
 				49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */,
 				49B9913820FBF20C0086FD01 /* Animal.swift in Sources */,
 				49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */,
 				49B9913520FBEFCF0086FD01 /* AnimalViewController.swift in Sources */,
 				49B9913E20FBF2A40086FD01 /* Parrot.swift in Sources */,
+				49B9914C20FBFB260086FD01 /* AnimalDataSource.swift in Sources */,
 				49B9914220FBF3280086FD01 /* Ferret.swift in Sources */,
 				49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */,
 				49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */,

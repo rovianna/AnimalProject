@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TIN-DH-tS2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,115 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ivf-g4-vhf">
+            <objects>
+                <navigationController id="TIN-DH-tS2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gid-V1-CoR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rgt-Kf-sk8" kind="relationship" relationship="rootViewController" id="InZ-iC-B2r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhK-Ti-XK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1172" y="53"/>
+        </scene>
         <!--Animal View Controller-->
+        <scene sceneID="Hn6-cF-UKn">
+            <objects>
+                <viewController id="rgt-Kf-sk8" customClass="AnimalViewController" customModule="AnimalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hys-cI-4bv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh2-cm-6Ag">
+                                <rect key="frame" x="0.0" y="625" width="375" height="42"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.43529411759999997" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="R9Q-ci-6nw"/>
+                                </constraints>
+                                <state key="normal" title="Chamar Próximo Animal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="unb-Jp-0lu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="561"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" id="guB-lq-rjE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="guB-lq-rjE" id="a2x-n1-LKz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qh2-cm-6Ag" firstAttribute="bottom" secondItem="SsL-E2-mOa" secondAttribute="bottom" id="AlG-5b-mAz"/>
+                            <constraint firstItem="Qh2-cm-6Ag" firstAttribute="top" secondItem="unb-Jp-0lu" secondAttribute="bottom" id="M79-4c-zZa"/>
+                            <constraint firstItem="Qh2-cm-6Ag" firstAttribute="trailing" secondItem="SsL-E2-mOa" secondAttribute="trailing" id="QJ1-I4-YSe"/>
+                            <constraint firstItem="unb-Jp-0lu" firstAttribute="leading" secondItem="SsL-E2-mOa" secondAttribute="leading" id="Vp9-DZ-gHY"/>
+                            <constraint firstItem="unb-Jp-0lu" firstAttribute="trailing" secondItem="SsL-E2-mOa" secondAttribute="trailing" id="bzE-08-5BU"/>
+                            <constraint firstItem="unb-Jp-0lu" firstAttribute="top" secondItem="SsL-E2-mOa" secondAttribute="top" id="fCh-Fu-UhS"/>
+                            <constraint firstItem="Qh2-cm-6Ag" firstAttribute="top" secondItem="unb-Jp-0lu" secondAttribute="bottom" id="v23-r6-o5G"/>
+                            <constraint firstItem="Qh2-cm-6Ag" firstAttribute="leading" secondItem="SsL-E2-mOa" secondAttribute="leading" id="vl1-Cs-opa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SsL-E2-mOa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YbC-xU-ZLa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o9f-gY-JdX">
+                            <connections>
+                                <action selector="addAnimalOptionAction:" destination="rgt-Kf-sk8" id="btx-WX-jkn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animalsTableView" destination="unb-Jp-0lu" id="8rI-zi-Zht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eal-MK-8nM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="52.623688155922046"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MBp-we-JC9">
+            <objects>
+                <navigationController id="pI8-ST-0hO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="42U-z3-iGh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mQG-F8-bDU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bej-VU-gL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1172" y="758"/>
+        </scene>
+        <!--Detail Animal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AnimalViewController" customModule="AnimalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailAnimalViewController" customModule="AnimalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="arR-Hq-qNa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-407" y="758"/>
         </scene>
     </scenes>
 </document>
