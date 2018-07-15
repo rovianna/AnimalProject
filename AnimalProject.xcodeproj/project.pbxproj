@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9912020FBE5600086FD01 /* AppDelegate.swift */; };
-		49B9912320FBE5600086FD01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9912220FBE5600086FD01 /* ViewController.swift */; };
 		49B9912620FBE5600086FD01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B9912420FBE5600086FD01 /* Main.storyboard */; };
 		49B9912820FBE5610086FD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B9912720FBE5610086FD01 /* Assets.xcassets */; };
 		49B9912B20FBE5610086FD01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B9912920FBE5610086FD01 /* LaunchScreen.storyboard */; };
+		49B9913520FBEFCF0086FD01 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913420FBEFCF0086FD01 /* AnimalViewController.swift */; };
+		49B9913820FBF20C0086FD01 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913720FBF20C0086FD01 /* Animal.swift */; };
+		49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913920FBF22C0086FD01 /* Dog.swift */; };
+		49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913B20FBF27D0086FD01 /* Cat.swift */; };
+		49B9913E20FBF2A40086FD01 /* Parrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913D20FBF2A40086FD01 /* Parrot.swift */; };
+		49B9914020FBF2BB0086FD01 /* Parakeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913F20FBF2BB0086FD01 /* Parakeet.swift */; };
+		49B9914220FBF3280086FD01 /* Ferret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914120FBF3280086FD01 /* Ferret.swift */; };
+		49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914420FBF3660086FD01 /* AnimalFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49B9911D20FBE5600086FD01 /* AnimalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B9912020FBE5600086FD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49B9912220FBE5600086FD01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49B9912520FBE5600086FD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49B9912720FBE5610086FD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B9912A20FBE5610086FD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B9912C20FBE5610086FD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B9913420FBEFCF0086FD01 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		49B9913720FBF20C0086FD01 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		49B9913920FBF22C0086FD01 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		49B9913B20FBF27D0086FD01 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		49B9913D20FBF2A40086FD01 /* Parrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parrot.swift; sourceTree = "<group>"; };
+		49B9913F20FBF2BB0086FD01 /* Parakeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parakeet.swift; sourceTree = "<group>"; };
+		49B9914120FBF3280086FD01 /* Ferret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ferret.swift; sourceTree = "<group>"; };
+		49B9914420FBF3660086FD01 /* AnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		49B9911F20FBE5600086FD01 /* AnimalProject */ = {
 			isa = PBXGroup;
 			children = (
+				49B9914620FBF38C0086FD01 /* Controllers */,
+				49B9913620FBF1FF0086FD01 /* Models */,
 				49B9912020FBE5600086FD01 /* AppDelegate.swift */,
-				49B9912220FBE5600086FD01 /* ViewController.swift */,
 				49B9912420FBE5600086FD01 /* Main.storyboard */,
 				49B9912720FBE5610086FD01 /* Assets.xcassets */,
 				49B9912920FBE5610086FD01 /* LaunchScreen.storyboard */,
 				49B9912C20FBE5610086FD01 /* Info.plist */,
 			);
 			path = AnimalProject;
+			sourceTree = "<group>";
+		};
+		49B9913620FBF1FF0086FD01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49B9914320FBF3540086FD01 /* Factory */,
+				49B9913720FBF20C0086FD01 /* Animal.swift */,
+				49B9913920FBF22C0086FD01 /* Dog.swift */,
+				49B9913B20FBF27D0086FD01 /* Cat.swift */,
+				49B9913D20FBF2A40086FD01 /* Parrot.swift */,
+				49B9913F20FBF2BB0086FD01 /* Parakeet.swift */,
+				49B9914120FBF3280086FD01 /* Ferret.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49B9914320FBF3540086FD01 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				49B9914420FBF3660086FD01 /* AnimalFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		49B9914620FBF38C0086FD01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49B9913420FBEFCF0086FD01 /* AnimalViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B9912320FBE5600086FD01 /* ViewController.swift in Sources */,
 				49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */,
+				49B9913820FBF20C0086FD01 /* Animal.swift in Sources */,
+				49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */,
+				49B9913520FBEFCF0086FD01 /* AnimalViewController.swift in Sources */,
+				49B9913E20FBF2A40086FD01 /* Parrot.swift in Sources */,
+				49B9914220FBF3280086FD01 /* Ferret.swift in Sources */,
+				49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */,
+				49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */,
+				49B9914020FBF2BB0086FD01 /* Parakeet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
