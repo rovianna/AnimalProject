@@ -15,9 +15,9 @@ protocol AnimalProtocol {
 struct Animal {
     var name: String
     var age: Int
-    var animal: AnimalType
+    var animal: Specie
     
-    enum AnimalType {
+    enum Specie {
         case Dog
         case Cat
         case Parrot

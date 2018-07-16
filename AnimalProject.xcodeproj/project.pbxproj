@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490DAA5320FCA8D7003C0628 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DAA5120FCA8D7003C0628 /* AnimalTableViewCell.swift */; };
+		490DAA5420FCA8D7003C0628 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490DAA5220FCA8D7003C0628 /* AnimalTableViewCell.xib */; };
 		49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9912020FBE5600086FD01 /* AppDelegate.swift */; };
 		49B9912620FBE5600086FD01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B9912420FBE5600086FD01 /* Main.storyboard */; };
 		49B9912820FBE5610086FD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B9912720FBE5610086FD01 /* Assets.xcassets */; };
@@ -16,7 +18,7 @@
 		49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913920FBF22C0086FD01 /* Dog.swift */; };
 		49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913B20FBF27D0086FD01 /* Cat.swift */; };
 		49B9913E20FBF2A40086FD01 /* Parrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913D20FBF2A40086FD01 /* Parrot.swift */; };
-		49B9914020FBF2BB0086FD01 /* Parakeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913F20FBF2BB0086FD01 /* Parakeet.swift */; };
+		49B9914020FBF2BB0086FD01 /* Parekeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9913F20FBF2BB0086FD01 /* Parekeet.swift */; };
 		49B9914220FBF3280086FD01 /* Ferret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914120FBF3280086FD01 /* Ferret.swift */; };
 		49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914420FBF3660086FD01 /* AnimalFactory.swift */; };
 		49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490DAA5120FCA8D7003C0628 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalTableViewCell.swift; path = AnimalProject/Controllers/AnimalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		490DAA5220FCA8D7003C0628 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AnimalTableViewCell.xib; path = AnimalProject/Controllers/AnimalTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		49B9911D20FBE5600086FD01 /* AnimalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B9912020FBE5600086FD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B9912520FBE5600086FD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +39,7 @@
 		49B9913920FBF22C0086FD01 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		49B9913B20FBF27D0086FD01 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		49B9913D20FBF2A40086FD01 /* Parrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parrot.swift; sourceTree = "<group>"; };
-		49B9913F20FBF2BB0086FD01 /* Parakeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parakeet.swift; sourceTree = "<group>"; };
+		49B9913F20FBF2BB0086FD01 /* Parekeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parekeet.swift; sourceTree = "<group>"; };
 		49B9914120FBF3280086FD01 /* Ferret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ferret.swift; sourceTree = "<group>"; };
 		49B9914420FBF3660086FD01 /* AnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactory.swift; sourceTree = "<group>"; };
 		49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimalViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 				49B9913920FBF22C0086FD01 /* Dog.swift */,
 				49B9913B20FBF27D0086FD01 /* Cat.swift */,
 				49B9913D20FBF2A40086FD01 /* Parrot.swift */,
-				49B9913F20FBF2BB0086FD01 /* Parakeet.swift */,
+				49B9913F20FBF2BB0086FD01 /* Parekeet.swift */,
 				49B9914120FBF3280086FD01 /* Ferret.swift */,
 			);
 			path = Models;
@@ -127,6 +131,8 @@
 		49B9914A20FBFB120086FD01 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				490DAA5120FCA8D7003C0628 /* AnimalTableViewCell.swift */,
+				490DAA5220FCA8D7003C0628 /* AnimalTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B9912B20FBE5610086FD01 /* LaunchScreen.storyboard in Resources */,
+				490DAA5420FCA8D7003C0628 /* AnimalTableViewCell.xib in Resources */,
 				49B9912820FBE5610086FD01 /* Assets.xcassets in Resources */,
 				49B9912620FBE5600086FD01 /* Main.storyboard in Resources */,
 			);
@@ -211,8 +218,9 @@
 				49B9914C20FBFB260086FD01 /* AnimalDataSource.swift in Sources */,
 				49B9914220FBF3280086FD01 /* Ferret.swift in Sources */,
 				49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */,
+				490DAA5320FCA8D7003C0628 /* AnimalTableViewCell.swift in Sources */,
 				49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */,
-				49B9914020FBF2BB0086FD01 /* Parakeet.swift in Sources */,
+				49B9914020FBF2BB0086FD01 /* Parekeet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

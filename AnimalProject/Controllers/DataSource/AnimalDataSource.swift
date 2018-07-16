@@ -43,9 +43,17 @@ class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell")
-        cell?.textLabel?.text = animals[indexPath.row].name
-        return cell!
+        let nib = UINib(nibName: "AnimalTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "animalCell")
+        let animal = animals[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as! AnimalTableViewCell
+        cell.selectionStyle = .none
+        cell.configure(animal: animal)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

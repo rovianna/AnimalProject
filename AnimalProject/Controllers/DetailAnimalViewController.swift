@@ -10,8 +10,31 @@ import UIKit
 
 class DetailAnimalViewController: UIViewController {
 
+    class var instance: DetailAnimalViewController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailAnimalViewController
+        return view
+    }
+    
+    var specie: Animal.Specie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        assert(specie != nil, "animal can't be nil")
+        if let specie = specie {
+        loader(specie: specie)
+        }
     }
+    
+    func loader(specie: Animal.Specie) {
+        switch specie {
+        case .Dog: self.navigationItem.title = "Adicionar um novo cachorro"
+        case .Cat: self.navigationItem.title = "Adicionar um novo gato"
+        case .Ferret: self.navigationItem.title = "Adicionar um novo furão"
+        case .Parekeet: self.navigationItem.title = "Adicionar um novo periquito"
+        case .Parrot: self.navigationItem.title = "Adicionar um novo papagaio"
+        }
+    }
+    
+    
 }

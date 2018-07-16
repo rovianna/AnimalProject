@@ -22,6 +22,7 @@ class AnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAnimals()
+        
     }
     
     func loadAnimals() {
@@ -42,20 +43,26 @@ class AnimalViewController: UIViewController {
 
     @IBAction func addAnimalOptionAction(_ sender: UIBarButtonItem) {
         let animalChoice = UIAlertController(title: "Adicionar novo animal", message: "Qual animal?", preferredStyle: .actionSheet)
+        let view = DetailAnimalViewController.instance
         let dogAction = UIAlertAction(title: "Cachorro", style: .default) { (alert) in
-            print("Dog")
+            view.specie = .Dog
+            self.navigationController?.show(view, sender: nil)
         }
         let catAction = UIAlertAction(title: "Gato", style: .default) { (alert) in
-            print("Cat")
+            view.specie = .Cat
+            self.navigationController?.show(view, sender: nil)
         }
         let parrotAction = UIAlertAction(title: "Papagaio", style: .default) { (alert) in
-            print("Parrot")
+            view.specie = .Parrot
+            self.navigationController?.show(view, sender: nil)
         }
         let parakeetAction = UIAlertAction(title: "Periquito", style: .default) { (alert) in
-            print("Parakeet")
+            view.specie = .Parekeet
+            self.navigationController?.show(view, sender: nil)
         }
         let ferretAction = UIAlertAction(title: "Furão", style: .default) { (alert) in
-            print("Ferret")
+            view.specie = .Ferret
+            self.navigationController?.show(view, sender: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
         animalChoice.addAction(dogAction)

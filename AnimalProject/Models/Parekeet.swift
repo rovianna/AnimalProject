@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Parakeet: AnimalProtocol {
+class Parekeet: AnimalProtocol {
     var animal: Animal
     init(animal: Animal) {
         self.animal = animal

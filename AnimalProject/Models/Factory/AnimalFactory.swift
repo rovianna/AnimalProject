@@ -14,7 +14,7 @@ struct AnimalFactory {
         case .Dog: return Dog(animal: animal)
         case .Cat: return Cat(animal: animal)
         case .Ferret: return Ferret(animal: animal)
-        case .Parekeet: return Parakeet(animal: animal)
+        case .Parekeet: return Parekeet(animal: animal)
         case .Parrot: return Parrot(animal: animal)
         }
     }
