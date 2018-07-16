@@ -10,29 +10,33 @@ import UIKit
 
 class AnimalViewController: UIViewController {
 
-    var animals = [Animal]()
-    var dataSource: AnimalDataSource?
+    var animals = [Animal]() {
+        didSet {
+            receiveAnimals(animals)
+        }
+    }
+    var source: AnimalDataSource?
     
     @IBOutlet weak var animalsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadAnimals()
+    }
+    
+    func loadAnimals() {
         animals.append(Animal(name: "Totó", age: 4, animal: .Dog))
         animals.append(Animal(name: "Lazarento", age: 3, animal: .Cat))
-        
-        for animal in animals {
-            let animalQueue = AnimalFactory.getAnimal(animal: animal)
-            print("DEV: \(animalQueue.animalRequester())")
-        }
-        
+    }
+    
+    func receiveAnimals(_ animals: [Animal]) {
         let source = AnimalDataSource(tableView: animalsTableView, animals: animals)
         applyDataSource(source: source)
     }
     
-    func applyDataSource(source: AnimalDataSource){
+    func applyDataSource(source: AnimalDataSource) {
         source.delegate = self
-        self.dataSource = source
+        self.source = source
         animalsTableView.reloadData()
     }
 

@@ -87,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				49B9914320FBF3540086FD01 /* Factory */,
-				49B9913720FBF20C0086FD01 /* Animal.swift */,
 				49B9913920FBF22C0086FD01 /* Dog.swift */,
 				49B9913B20FBF27D0086FD01 /* Cat.swift */,
 				49B9913D20FBF2A40086FD01 /* Parrot.swift */,
@@ -100,6 +99,7 @@
 		49B9914320FBF3540086FD01 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				49B9913720FBF20C0086FD01 /* Animal.swift */,
 				49B9914420FBF3660086FD01 /* AnimalFactory.swift */,
 			);
 			path = Factory;

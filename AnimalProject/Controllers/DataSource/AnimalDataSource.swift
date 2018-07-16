@@ -15,12 +15,27 @@ protocol AnimalDelegate {
 class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     weak var tableView: UITableView?
-    var animals = [Animal]()
+    var animals = [Animal]() {
+        didSet {
+            onMain {
+            self.tableView?.reloadData()
+            }
+        }
+    }
     var delegate: AnimalDelegate?
     
     init(tableView: UITableView, animals: [Animal]){
-        self.tableView = tableView
+        super.init()
         self.animals = animals
+        tableView.dataSource = self
+        tableView.delegate = self
+        self.tableView = tableView
+    }
+    
+    func onMain(block: @escaping ()->()) {
+        DispatchQueue.main.async {
+            block()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
