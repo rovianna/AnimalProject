@@ -16,7 +16,15 @@ class DetailAnimalViewController: UIViewController {
         return view
     }
     
+    @IBOutlet weak var animalNameTextField: UITextField!
+    @IBOutlet weak var animalAgeTextField: UITextField!
+    @IBOutlet weak var animalQueueLabel: UILabel!
+    
+    
+    
     var specie: Animal.Specie?
+    var animals = [Animal]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +42,10 @@ class DetailAnimalViewController: UIViewController {
         case .Parekeet: self.navigationItem.title = "Adicionar um novo periquito"
         case .Parrot: self.navigationItem.title = "Adicionar um novo papagaio"
         }
+    }
+    
+    @IBAction func addAnimalAction(_ sender: UIButton) {
+        
     }
     
     
