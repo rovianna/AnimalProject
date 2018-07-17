@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DetailAnimalViewControllerDelegate {
+    func addNewAnimal(_ DetailAnimalViewController: DetailAnimalViewController, animal: Animal)
+}
+
 class DetailAnimalViewController: UIViewController {
 
     class var instance: DetailAnimalViewController {
@@ -20,8 +24,7 @@ class DetailAnimalViewController: UIViewController {
     @IBOutlet weak var animalAgeTextField: UITextField!
     @IBOutlet weak var animalQueueLabel: UILabel!
     
-    
-    
+    var delegate: DetailAnimalViewControllerDelegate?
     var specie: Animal.Specie?
     var animals = [Animal]()
     
@@ -45,7 +48,11 @@ class DetailAnimalViewController: UIViewController {
     }
     
     @IBAction func addAnimalAction(_ sender: UIButton) {
-        
+        if let name = animalNameTextField.text, let age = Int(animalAgeTextField.text!), let specie = specie {
+            let newAnimal = Animal(name: name, age: age, animal: specie)
+            delegate?.addNewAnimal(self, animal: newAnimal)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     

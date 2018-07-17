@@ -12,6 +12,9 @@ class AnimalViewController: UIViewController {
 
     var animals = [Animal]() {
         didSet {
+            animals.sort(by: { left, right in
+                return left.age > right.age
+            })
             receiveAnimals(animals)
         }
     }
@@ -71,12 +74,19 @@ class AnimalViewController: UIViewController {
         animalChoice.addAction(parakeetAction)
         animalChoice.addAction(ferretAction)
         animalChoice.addAction(cancelAction)
-                present(animalChoice, animated: true, completion: nil)
+        view.delegate = self
+        present(animalChoice, animated: true, completion: nil)
     }
 }
 
 extension AnimalViewController: AnimalDelegate {
     func selected(_ AnimalDataSource: AnimalDataSource, animal: Animal) {
         
+    }
+}
+
+extension AnimalViewController: DetailAnimalViewControllerDelegate {
+    func addNewAnimal(_ DetailAnimalViewController: DetailAnimalViewController, animal: Animal){
+        self.animals.append(animal)
     }
 }
