@@ -20,9 +20,10 @@ class CurrentAnimalViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func loadQuotes(for specie: Animal.Specie) {
+    func loadQuotes(for specie: Animal.Specie) -> [Quote] {
+        var quotes = [Quote]()
         switch specie {
-        case .Dog:
+        case .Dog: return DogQuote.quoteRequester(DogQuote)
         case .Cat:
         case .Ferret:
         case .Parekeet:

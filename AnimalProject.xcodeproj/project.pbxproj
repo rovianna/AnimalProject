@@ -92,6 +92,7 @@
 		49B9911F20FBE5600086FD01 /* AnimalProject */ = {
 			isa = PBXGroup;
 			children = (
+				49E3B47B20FE01D2000E6E2E /* Requester */,
 				49B9914620FBF38C0086FD01 /* Controllers */,
 				49B9913620FBF1FF0086FD01 /* Models */,
 				49B9912420FBE5600086FD01 /* Main.storyboard */,
@@ -191,6 +192,13 @@
 				49E3B47920FE0000000E6E2E /* FerretQuote.swift */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		49E3B47B20FE01D2000E6E2E /* Requester */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requester;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

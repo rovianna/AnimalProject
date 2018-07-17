@@ -9,13 +9,14 @@
 import Foundation
 
 struct QuoteFactory {
-    static func getQuote(for specie: Animal.Specie) -> [String] {
+    static func getQuote(for specie: Animal.Specie) -> QuoteProtocol {
+        var quote = [Quote]()
         switch specie {
-        case .Dog: break
-        case .Cat: break
-        case .Ferret: break
-        case .Parekeet: break
-        case .Parrot: break
+        case .Dog: return DogQuote(quotes: quote)
+        case .Cat: return CatQuote(quotes: quote)
+        case .Ferret: return FerretQuote(quotes: quote)
+        case .Parekeet: return ParekeetQuote(quotes: quote)
+        case .Parrot: return ParrotQuote(quotes: quote)
         }
     }
 }
