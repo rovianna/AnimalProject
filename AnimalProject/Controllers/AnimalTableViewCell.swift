@@ -12,7 +12,7 @@ class AnimalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var animalNameLabel: UILabel!
     @IBOutlet weak var animalAgeLabel: UILabel!
-    @IBOutlet weak var animalSpeciesLabel: UILabel!
+    @IBOutlet weak var animalSpeciesImage: UIImageView!
     @IBOutlet weak var animalPriorityLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,11 +23,11 @@ class AnimalTableViewCell: UITableViewCell {
         animalNameLabel.text = animal.name
         animalAgeLabel.text = "\(animal.age) anos"
         switch animal.animal {
-        case .Dog: animalSpeciesLabel.text = "Cachorro"
-        case .Cat: animalSpeciesLabel.text = "Gato"
-        case .Ferret: animalSpeciesLabel.text = "Furão"
-        case .Parrot: animalSpeciesLabel.text = "Papagaio"
-        case .Parekeet: animalSpeciesLabel.text = "Periquito"
+        case .Dog: animalSpeciesImage.image = #imageLiteral(resourceName: "dog")
+        case .Cat: animalSpeciesImage.image = #imageLiteral(resourceName: "cat")
+        case .Ferret: animalSpeciesImage.image = #imageLiteral(resourceName: "ferret")
+        case .Parrot: animalSpeciesImage.image = #imageLiteral(resourceName: "macaw")
+        case .Parekeet: animalSpeciesImage.image = #imageLiteral(resourceName: "bird")
         }
         animalPriorityLabel.text = animal.age > 3 ? "Sim" : "Não"
     }

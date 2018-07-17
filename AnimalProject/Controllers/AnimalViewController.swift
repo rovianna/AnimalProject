@@ -18,6 +18,7 @@ class AnimalViewController: UIViewController {
             receiveAnimals(animals)
         }
     }
+    var currentAnimal: Animal?
     var source: AnimalDataSource?
     
     @IBOutlet weak var animalsTableView: UITableView!
@@ -88,6 +89,8 @@ class AnimalViewController: UIViewController {
     }
     
     @IBAction func seeCurrentAnimalAction(_ sender: UIBarButtonItem) {
+        guard let animal = currentAnimal else { return }
+        
         
     }
     
