@@ -9,7 +9,7 @@
 import UIKit
 
 class AnimalViewController: UIViewController {
-
+    
     var animals = [Animal]() {
         didSet {
             animals.sort(by: { left, right in
@@ -31,6 +31,10 @@ class AnimalViewController: UIViewController {
     func loadAnimals() {
         animals.append(Animal(name: "Totó", age: 4, animal: .Dog))
         animals.append(Animal(name: "Lazarento", age: 3, animal: .Cat))
+        animals.append(Animal(name: "Louro", age: 5, animal: .Parekeet))
+        animals.append(Animal(name: "Furaozinho", age: 2, animal: .Ferret))
+        animals.append(Animal(name: "Papa", age: 3, animal: .Parrot))
+        animals.append(Animal(name: "Auau", age: 3, animal: .Dog))
     }
     
     func receiveAnimals(_ animals: [Animal]) {
@@ -43,7 +47,7 @@ class AnimalViewController: UIViewController {
         self.source = source
         animalsTableView.reloadData()
     }
-
+    
     @IBAction func addAnimalOptionAction(_ sender: UIBarButtonItem) {
         let animalChoice = UIAlertController(title: "Adicionar novo animal", message: "Qual animal?", preferredStyle: .actionSheet)
         let view = DetailAnimalViewController.instance
@@ -77,6 +81,16 @@ class AnimalViewController: UIViewController {
         view.delegate = self
         present(animalChoice, animated: true, completion: nil)
     }
+    
+    @IBAction func callNextAnimalAction(_ sender: UIButton) {
+        animals.removeFirst()
+        
+    }
+    
+    @IBAction func seeCurrentAnimalAction(_ sender: UIBarButtonItem) {
+        
+    }
+    
 }
 
 extension AnimalViewController: AnimalDelegate {

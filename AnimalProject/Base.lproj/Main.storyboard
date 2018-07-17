@@ -43,6 +43,9 @@
                                 <state key="normal" title="Chamar Próximo Animal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="callNextAnimalAction:" destination="rgt-Kf-sk8" eventType="touchUpInside" id="IYZ-VS-8aF"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="unb-Jp-0lu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="561"/>
@@ -74,6 +77,11 @@
                         <viewLayoutGuide key="safeArea" id="SsL-E2-mOa"/>
                     </view>
                     <navigationItem key="navigationItem" id="YbC-xU-ZLa">
+                        <barButtonItem key="leftBarButtonItem" title="Atual" id="rjZ-nG-V2h">
+                            <connections>
+                                <action selector="seeCurrentAnimalAction:" destination="rgt-Kf-sk8" id="Bo1-zv-cEr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="o9f-gY-JdX">
                             <connections>
                                 <action selector="addAnimalOptionAction:" destination="rgt-Kf-sk8" id="btx-WX-jkn"/>
@@ -87,6 +95,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eal-MK-8nM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-407.19999999999999" y="52.623688155922046"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ch8-Pv-jVf">
+            <objects>
+                <viewController id="uoT-li-j8F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ffk-S4-Umo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PrC-zS-Vch"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L1r-rx-Ryv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q3-wx-NDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="53"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PYV-lu-8eo">
+            <objects>
+                <navigationController id="tuB-lY-yEp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ict-WD-fBO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uoT-li-j8F" kind="relationship" relationship="rootViewController" id="HT7-Lj-BFX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HoL-NV-lmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MBp-we-JC9">

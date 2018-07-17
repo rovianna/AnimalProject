@@ -13,7 +13,7 @@ protocol DetailAnimalViewControllerDelegate {
 }
 
 class DetailAnimalViewController: UIViewController {
-
+    
     class var instance: DetailAnimalViewController {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailAnimalViewController
@@ -33,7 +33,7 @@ class DetailAnimalViewController: UIViewController {
         super.viewDidLoad()
         assert(specie != nil, "animal can't be nil")
         if let specie = specie {
-        loader(specie: specie)
+            loader(specie: specie)
         }
     }
     
