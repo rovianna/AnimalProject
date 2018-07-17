@@ -31,6 +31,7 @@
 		49E3B47620FDFF74000E6E2E /* ParrotQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47520FDFF74000E6E2E /* ParrotQuote.swift */; };
 		49E3B47820FDFFC3000E6E2E /* ParekeetQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47720FDFFC3000E6E2E /* ParekeetQuote.swift */; };
 		49E3B47A20FE0000000E6E2E /* FerretQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47920FE0000000E6E2E /* FerretQuote.swift */; };
+		49E3B47D20FE0267000E6E2E /* QuoteRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47C20FE0267000E6E2E /* QuoteRequester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		49E3B47520FDFF74000E6E2E /* ParrotQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotQuote.swift; sourceTree = "<group>"; };
 		49E3B47720FDFFC3000E6E2E /* ParekeetQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParekeetQuote.swift; sourceTree = "<group>"; };
 		49E3B47920FE0000000E6E2E /* FerretQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerretQuote.swift; sourceTree = "<group>"; };
+		49E3B47C20FE0267000E6E2E /* QuoteRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		49E3B47B20FE01D2000E6E2E /* Requester */ = {
 			isa = PBXGroup;
 			children = (
+				49E3B47C20FE0267000E6E2E /* QuoteRequester.swift */,
 			);
 			path = Requester;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */,
 				49E3B47220FDFE82000E6E2E /* DogQuote.swift in Sources */,
 				49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */,
+				49E3B47D20FE0267000E6E2E /* QuoteRequester.swift in Sources */,
 				49B9913820FBF20C0086FD01 /* Animal.swift in Sources */,
 				49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */,
 				49E3B47420FDFF1B000E6E2E /* CatQuote.swift in Sources */,

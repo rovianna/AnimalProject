@@ -18,18 +18,10 @@ class CurrentAnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
-    func loadQuotes(for specie: Animal.Specie) -> [Quote] {
-        var quotes = [Quote]()
-        switch specie {
-        case .Dog: return DogQuote.quoteRequester(DogQuote)
-        case .Cat:
-        case .Ferret:
-        case .Parekeet:
-        case .Parrot:
-        }
-    }
+    
     
     @IBAction func showerAnimalAction(_ sender: UIButton) {
         showerAnimalButton.isEnabled = false
