@@ -16,6 +16,8 @@ struct Animal {
     var name: String
     var age: Int
     var animal: Specie
+    var didShower: Bool = false
+    var didPet: Bool = false
     enum Specie {
         case Dog
         case Cat

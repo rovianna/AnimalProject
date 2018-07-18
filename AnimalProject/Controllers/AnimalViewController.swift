@@ -18,24 +18,25 @@ class AnimalViewController: UIViewController {
             receiveAnimals(animals)
         }
     }
-    var currentAnimal: Animal?
-    var source: AnimalDataSource?
     
+    @IBOutlet weak var nextAnimalButton: UIButton!
     @IBOutlet weak var animalsTableView: UITableView!
+    
+    var source: AnimalDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAnimals()
-        
+        nextAnimalButton.isEnabled = false
     }
     
     func loadAnimals() {
-        animals.append(Animal(name: "Totó", age: 4, animal: .Dog))
-        animals.append(Animal(name: "Lazarento", age: 3, animal: .Cat))
-        animals.append(Animal(name: "Louro", age: 5, animal: .Parekeet))
-        animals.append(Animal(name: "Furaozinho", age: 2, animal: .Ferret))
-        animals.append(Animal(name: "Papa", age: 3, animal: .Parrot))
-        animals.append(Animal(name: "Auau", age: 3, animal: .Dog))
+        animals.append(Animal(name: "Totó", age: 4, animal: .Dog, didShower: false, didPet: false))
+        animals.append(Animal(name: "Lazarento", age: 3, animal: .Cat, didShower: false, didPet: false))
+        animals.append(Animal(name: "Louro", age: 5, animal: .Parekeet, didShower: false, didPet: false))
+        animals.append(Animal(name: "Furaozinho", age: 2, animal: .Ferret, didShower: false, didPet: false))
+        animals.append(Animal(name: "Papa", age: 3, animal: .Parrot, didShower: false, didPet: false))
+        animals.append(Animal(name: "Auau", age: 3, animal: .Dog, didShower: false, didPet: false))
     }
     
     func receiveAnimals(_ animals: [Animal]) {
@@ -84,14 +85,18 @@ class AnimalViewController: UIViewController {
     }
     
     @IBAction func callNextAnimalAction(_ sender: UIButton) {
+        guard let animal = animals.first else { return }
+        if animal.didPet && animal.didShower {
         animals.removeFirst()
-        
+        }
     }
     
     @IBAction func seeCurrentAnimalAction(_ sender: UIBarButtonItem) {
-        guard let animal = currentAnimal else { return }
-        
-        
+        guard let animal = animals.first else { return }
+        let currentAnimal = CurrentAnimalViewController.instance
+        currentAnimal.delegate = self
+        currentAnimal.animal = animal
+        self.navigationController?.show(currentAnimal, sender: nil)
     }
     
 }
@@ -105,5 +110,13 @@ extension AnimalViewController: AnimalDelegate {
 extension AnimalViewController: DetailAnimalViewControllerDelegate {
     func addNewAnimal(_ DetailAnimalViewController: DetailAnimalViewController, animal: Animal){
         self.animals.append(animal)
+    }
+}
+
+extension AnimalViewController: CurrentAnimalViewControllerDelegate {
+    func getCurrentAnimal(_ currentAnimalViewController: CurrentAnimalViewController, animal: Animal) {
+        guard let index = self.animals.index(where: {$0.name == animal.name}) else { return }
+        self.animals[index] = animal
+        nextAnimalButton.isEnabled = true
     }
 }
