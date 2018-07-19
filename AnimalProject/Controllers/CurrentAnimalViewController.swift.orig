@@ -31,8 +31,15 @@ class CurrentAnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
+        
+    }
+    
+    
+=======
         assert(animal != nil, "Animal can't be nil")
     }
+>>>>>>> a02ade0821adb3b421e0bd4d01aa04f3f917ce90
     
     @IBAction func showerAnimalAction(_ sender: UIButton) {
         animal?.didShower = true

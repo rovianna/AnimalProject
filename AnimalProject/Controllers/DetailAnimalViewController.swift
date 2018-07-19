@@ -49,7 +49,7 @@ class DetailAnimalViewController: UIViewController {
     
     @IBAction func addAnimalAction(_ sender: UIButton) {
         if let name = animalNameTextField.text, let age = Int(animalAgeTextField.text!), let specie = specie {
-            let newAnimal = Animal(name: name, age: age, animal: specie)
+            let newAnimal = Animal(name: name, age: age, animal: specie, didShower: false, didPet: false)
             delegate?.addNewAnimal(self, animal: newAnimal)
             self.navigationController?.popViewController(animated: true)
         }

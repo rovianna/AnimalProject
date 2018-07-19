@@ -90,6 +90,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="animalsTableView" destination="unb-Jp-0lu" id="8rI-zi-Zht"/>
+                        <outlet property="nextAnimalButton" destination="Qh2-cm-6Ag" id="Jgb-jx-t7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eal-MK-8nM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,7 +100,7 @@
         <!--Current Animal View Controller-->
         <scene sceneID="ch8-Pv-jVf">
             <objects>
-                <viewController id="uoT-li-j8F" customClass="CurrentAnimalViewController" customModule="AnimalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="current" id="uoT-li-j8F" customClass="CurrentAnimalViewController" customModule="AnimalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffk-S4-Umo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
