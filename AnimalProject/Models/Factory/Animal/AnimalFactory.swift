@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct AnimalFactory {
-    static func getAnimal(animal: Animal) -> AnimalProtocol {
-        switch animal.animal {
-        case .Dog: return Dog(animal: animal)
-        case .Cat: return Cat(animal: animal)
-        case .Ferret: return Ferret(animal: animal)
-        case .Parekeet: return Parekeet(animal: animal)
-        case .Parrot: return Parrot(animal: animal)
+class AnimalFactory {
+    static func getAnimal(species: Species,name: String, age: Int) -> Animal {
+        switch species {
+        case .dog: return Dog(name: name, age: age)
+        case .cat: return Cat(name: name, age: age)
+        case .ferret: return Ferret(name: name, age: age)
+        case .parekeet: return Parekeet(name: name, age: age)
+        case .parrot: return Parrot(name: name, age: age)
         }
     }
 }

@@ -8,21 +8,18 @@
 
 import UIKit
 
-protocol AnimalProtocol {
-    func animalRequester() -> Animal
+protocol Animal {
+    
+    var name: String { get set }
+    var age: Int { get set }
+    var specie: Species { get }
+    
 }
 
-struct Animal {
-    var name: String
-    var age: Int
-    var animal: Specie
-    var didShower: Bool = false
-    var didPet: Bool = false
-    enum Specie {
-        case Dog
-        case Cat
-        case Parrot
-        case Parekeet
-        case Ferret
-    }
+enum Species {
+    case dog
+    case cat
+    case parrot
+    case parekeet
+    case ferret
 }
