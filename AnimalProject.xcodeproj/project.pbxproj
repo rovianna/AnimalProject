@@ -23,14 +23,6 @@
 		49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914420FBF3660086FD01 /* AnimalFactory.swift */; };
 		49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */; };
 		49B9914C20FBFB260086FD01 /* AnimalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9914B20FBFB260086FD01 /* AnimalDataSource.swift */; };
-		49E3B46420FDF95C000E6E2E /* CurrentAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B46320FDF95C000E6E2E /* CurrentAnimalViewController.swift */; };
-		49E3B46D20FDFD6C000E6E2E /* QuoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B46C20FDFD6C000E6E2E /* QuoteFactory.swift */; };
-		49E3B46F20FDFDCB000E6E2E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B46E20FDFDCB000E6E2E /* Quote.swift */; };
-		49E3B47220FDFE82000E6E2E /* DogQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47120FDFE82000E6E2E /* DogQuote.swift */; };
-		49E3B47420FDFF1B000E6E2E /* CatQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47320FDFF1B000E6E2E /* CatQuote.swift */; };
-		49E3B47620FDFF74000E6E2E /* ParrotQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47520FDFF74000E6E2E /* ParrotQuote.swift */; };
-		49E3B47820FDFFC3000E6E2E /* ParekeetQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47720FDFFC3000E6E2E /* ParekeetQuote.swift */; };
-		49E3B47A20FE0000000E6E2E /* FerretQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47920FE0000000E6E2E /* FerretQuote.swift */; };
 		49E3B47D20FE0267000E6E2E /* QuoteRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3B47C20FE0267000E6E2E /* QuoteRequester.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,14 +45,6 @@
 		49B9914420FBF3660086FD01 /* AnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactory.swift; sourceTree = "<group>"; };
 		49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimalViewController.swift; sourceTree = "<group>"; };
 		49B9914B20FBFB260086FD01 /* AnimalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataSource.swift; sourceTree = "<group>"; };
-		49E3B46320FDF95C000E6E2E /* CurrentAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAnimalViewController.swift; sourceTree = "<group>"; };
-		49E3B46C20FDFD6C000E6E2E /* QuoteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFactory.swift; sourceTree = "<group>"; };
-		49E3B46E20FDFDCB000E6E2E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		49E3B47120FDFE82000E6E2E /* DogQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogQuote.swift; sourceTree = "<group>"; };
-		49E3B47320FDFF1B000E6E2E /* CatQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatQuote.swift; sourceTree = "<group>"; };
-		49E3B47520FDFF74000E6E2E /* ParrotQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotQuote.swift; sourceTree = "<group>"; };
-		49E3B47720FDFFC3000E6E2E /* ParekeetQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParekeetQuote.swift; sourceTree = "<group>"; };
-		49E3B47920FE0000000E6E2E /* FerretQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerretQuote.swift; sourceTree = "<group>"; };
 		49E3B47C20FE0267000E6E2E /* QuoteRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +92,6 @@
 		49B9913620FBF1FF0086FD01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				49E3B47020FDFE79000E6E2E /* Quotes */,
 				49E3B46720FDFBE6000E6E2E /* Species */,
 				49B9914320FBF3540086FD01 /* Factory */,
 				49B9912020FBE5600086FD01 /* AppDelegate.swift */,
@@ -119,7 +102,6 @@
 		49B9914320FBF3540086FD01 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				49E3B46B20FDFD60000E6E2E /* Quote */,
 				49E3B46820FDFBF3000E6E2E /* Animal */,
 			);
 			path = Factory;
@@ -132,7 +114,6 @@
 				49B9914920FBFB090086FD01 /* DataSource */,
 				49B9913420FBEFCF0086FD01 /* AnimalViewController.swift */,
 				49B9914720FBF9BA0086FD01 /* DetailAnimalViewController.swift */,
-				49E3B46320FDF95C000E6E2E /* CurrentAnimalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,27 +154,6 @@
 				49B9914420FBF3660086FD01 /* AnimalFactory.swift */,
 			);
 			path = Animal;
-			sourceTree = "<group>";
-		};
-		49E3B46B20FDFD60000E6E2E /* Quote */ = {
-			isa = PBXGroup;
-			children = (
-				49E3B46C20FDFD6C000E6E2E /* QuoteFactory.swift */,
-				49E3B46E20FDFDCB000E6E2E /* Quote.swift */,
-			);
-			path = Quote;
-			sourceTree = "<group>";
-		};
-		49E3B47020FDFE79000E6E2E /* Quotes */ = {
-			isa = PBXGroup;
-			children = (
-				49E3B47120FDFE82000E6E2E /* DogQuote.swift */,
-				49E3B47320FDFF1B000E6E2E /* CatQuote.swift */,
-				49E3B47520FDFF74000E6E2E /* ParrotQuote.swift */,
-				49E3B47720FDFFC3000E6E2E /* ParekeetQuote.swift */,
-				49E3B47920FE0000000E6E2E /* FerretQuote.swift */,
-			);
-			path = Quotes;
 			sourceTree = "<group>";
 		};
 		49E3B47B20FE01D2000E6E2E /* Requester */ = {
@@ -277,25 +237,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B9914820FBF9BA0086FD01 /* DetailAnimalViewController.swift in Sources */,
-				49E3B47220FDFE82000E6E2E /* DogQuote.swift in Sources */,
 				49B9912120FBE5600086FD01 /* AppDelegate.swift in Sources */,
 				49E3B47D20FE0267000E6E2E /* QuoteRequester.swift in Sources */,
 				49B9913820FBF20C0086FD01 /* Animal.swift in Sources */,
 				49B9913C20FBF27D0086FD01 /* Cat.swift in Sources */,
-				49E3B47420FDFF1B000E6E2E /* CatQuote.swift in Sources */,
-				49E3B47A20FE0000000E6E2E /* FerretQuote.swift in Sources */,
 				49B9913520FBEFCF0086FD01 /* AnimalViewController.swift in Sources */,
 				49B9913E20FBF2A40086FD01 /* Parrot.swift in Sources */,
-				49E3B47620FDFF74000E6E2E /* ParrotQuote.swift in Sources */,
 				49B9914C20FBFB260086FD01 /* AnimalDataSource.swift in Sources */,
-				49E3B46420FDF95C000E6E2E /* CurrentAnimalViewController.swift in Sources */,
 				49B9914220FBF3280086FD01 /* Ferret.swift in Sources */,
-				49E3B46D20FDFD6C000E6E2E /* QuoteFactory.swift in Sources */,
-				49E3B47820FDFFC3000E6E2E /* ParekeetQuote.swift in Sources */,
 				49B9914520FBF3660086FD01 /* AnimalFactory.swift in Sources */,
 				490DAA5320FCA8D7003C0628 /* AnimalTableViewCell.swift in Sources */,
 				49B9913A20FBF22C0086FD01 /* Dog.swift in Sources */,
-				49E3B46F20FDFDCB000E6E2E /* Quote.swift in Sources */,
 				49B9914020FBF2BB0086FD01 /* Parekeet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
