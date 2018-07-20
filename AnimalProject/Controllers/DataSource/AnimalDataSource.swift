@@ -15,18 +15,28 @@ protocol AnimalDelegate {
 class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     weak var tableView: UITableView?
-    var animals = [Animal]() {
+    
+    var priorityAnimals = [Animal]() {
         didSet {
             onMain {
-            self.tableView?.reloadData()
+                self.tableView?.reloadData()
             }
         }
     }
+    var nonPriorityAnimals = [Animal]() {
+        didSet {
+            onMain {
+                self.tableView?.reloadData()
+            }
+        }
+    }
+    
     var delegate: AnimalDelegate?
     
-    init(tableView: UITableView, animals: [Animal]){
+    init(tableView: UITableView, priorityAnimals: [Animal], nonPriorityAnimals: [Animal]){
         super.init()
-        self.animals = animals
+        self.priorityAnimals = priorityAnimals
+        self.nonPriorityAnimals = nonPriorityAnimals
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView = tableView
@@ -38,17 +48,41 @@ class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        if section == 0 {
+            return priorityAnimals.count
+        } else {
+            return nonPriorityAnimals.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Fila Prioritária"
+        } else {
+            return "Fila normal"
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let nib = UINib(nibName: "AnimalTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "animalCell")
-        let animal = animals[indexPath.row]
+        var animal : Animal?
+        if indexPath.section == 0 {
+        animal = priorityAnimals[indexPath.row]
+        } else {
+        animal = nonPriorityAnimals[indexPath.row]
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as! AnimalTableViewCell
+        if let animal = animal {
         cell.selectionStyle = .none
         cell.configure(name: animal.name, age: animal.age, specie: animal.specie)
+        }
         return cell
     }
     
@@ -57,7 +91,11 @@ class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.selected(self, animal: animals[indexPath.row])
+        if indexPath.section == 0 {
+        delegate?.selected(self, animal: priorityAnimals[indexPath.row])
+        } else {
+        delegate?.selected(self, animal: nonPriorityAnimals[indexPath.row])
+        }
     }
     
     
