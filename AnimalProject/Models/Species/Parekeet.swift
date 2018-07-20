@@ -8,13 +8,17 @@
 
 import Foundation
 
-class Parekeet: AnimalProtocol {
-    var animal: Animal
-    init(animal: Animal) {
-        self.animal = animal
+class Parekeet: Animal {
+    var name: String
+    
+    var age: Int
+    
+    var specie: Species = .parekeet
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
     }
     
-    func animalRequester() -> Animal {
-        return animal
-    }
+    
 }

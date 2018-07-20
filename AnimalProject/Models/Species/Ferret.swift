@@ -8,13 +8,17 @@
 
 import Foundation
 
-class Ferret: AnimalProtocol {
-    var animal: Animal
-    init(animal: Animal) {
-        self.animal = animal
+class Ferret: Animal {
+    var name: String
+    
+    var age: Int
+    
+    var specie: Species = .ferret
+    
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
     }
     
-    func animalRequester() -> Animal {
-        return animal
-    }
 }
