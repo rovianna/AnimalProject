@@ -25,31 +25,29 @@ class DetailAnimalViewController: UIViewController {
     @IBOutlet weak var animalQueueLabel: UILabel!
     
     var delegate: DetailAnimalViewControllerDelegate?
-    var specie: Animal.Specie?
-    var animals = [Animal]()
+    var specie: Species!
+    var animal : Animal!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assert(specie != nil, "animal can't be nil")
-        if let specie = specie {
             loader(specie: specie)
-        }
     }
     
-    func loader(specie: Animal.Specie) {
+    func loader(specie: Species) {
         switch specie {
-        case .Dog: self.navigationItem.title = "Adicionar um novo cachorro"
-        case .Cat: self.navigationItem.title = "Adicionar um novo gato"
-        case .Ferret: self.navigationItem.title = "Adicionar um novo furão"
-        case .Parekeet: self.navigationItem.title = "Adicionar um novo periquito"
-        case .Parrot: self.navigationItem.title = "Adicionar um novo papagaio"
+        case .dog: self.navigationItem.title = "Adicionar um novo cachorro"
+        case .cat: self.navigationItem.title = "Adicionar um novo gato"
+        case .ferret: self.navigationItem.title = "Adicionar um novo furão"
+        case .parekeet: self.navigationItem.title = "Adicionar um novo periquito"
+        case .parrot: self.navigationItem.title = "Adicionar um novo papagaio"
         }
     }
     
     @IBAction func addAnimalAction(_ sender: UIButton) {
-        if let name = animalNameTextField.text, let age = Int(animalAgeTextField.text!), let specie = specie {
-            let newAnimal = Animal(name: name, age: age, animal: specie, didShower: false, didPet: false)
+        if let name = animalNameTextField.text, let age = Int(animalAgeTextField.text!){
+            let newAnimal = AnimalFactory.getAnimal(species: specie, name: name, age: age)
             delegate?.addNewAnimal(self, animal: newAnimal)
             self.navigationController?.popViewController(animated: true)
         }

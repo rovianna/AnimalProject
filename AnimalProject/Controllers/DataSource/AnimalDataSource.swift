@@ -48,7 +48,7 @@ class AnimalDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         let animal = animals[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath) as! AnimalTableViewCell
         cell.selectionStyle = .none
-        cell.configure(animal: animal)
+        cell.configure(name: animal.name, age: animal.age, specie: animal.specie)
         return cell
     }
     

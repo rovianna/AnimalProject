@@ -19,16 +19,16 @@ class AnimalTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(animal: Animal) {
-        animalNameLabel.text = animal.name
-        animalAgeLabel.text = "\(animal.age) anos"
-        switch animal.animal {
-        case .Dog: animalSpeciesImage.image = #imageLiteral(resourceName: "dog")
-        case .Cat: animalSpeciesImage.image = #imageLiteral(resourceName: "cat")
-        case .Ferret: animalSpeciesImage.image = #imageLiteral(resourceName: "ferret")
-        case .Parrot: animalSpeciesImage.image = #imageLiteral(resourceName: "macaw")
-        case .Parekeet: animalSpeciesImage.image = #imageLiteral(resourceName: "bird")
+    func configure(name: String, age: Int, specie: Species) {
+        animalNameLabel.text = name
+        animalAgeLabel.text = "\(age) anos"
+        switch specie {
+        case .dog: animalSpeciesImage.image = #imageLiteral(resourceName: "dog")
+        case .cat: animalSpeciesImage.image = #imageLiteral(resourceName: "cat")
+        case .ferret: animalSpeciesImage.image = #imageLiteral(resourceName: "ferret")
+        case .parrot: animalSpeciesImage.image = #imageLiteral(resourceName: "macaw")
+        case .parekeet: animalSpeciesImage.image = #imageLiteral(resourceName: "bird")
         }
-        animalPriorityLabel.text = animal.age > 3 ? "Sim" : "Não"
+        animalPriorityLabel.text = age > 3 ? "Sim" : "Não"
     }
 }

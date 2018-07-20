@@ -31,17 +31,10 @@ class AnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAnimals()
-        nextAnimalButton.isEnabled = false
     }
     
     func loadAnimals() {
-        animals.append(Animal(name: "Totó", age: 4, animal: .Dog, didShower: false, didPet: false))
-        animals.append(Animal(name: "Lazarento", age: 3, animal: .Cat, didShower: false, didPet: false))
-        animals.append(Animal(name: "Lazarento", age: 5, animal: .Cat, didShower: false, didPet: false))
-        animals.append(Animal(name: "Louro", age: 5, animal: .Parekeet, didShower: false, didPet: false))
-        animals.append(Animal(name: "Furaozinho", age: 2, animal: .Ferret, didShower: false, didPet: false))
-        animals.append(Animal(name: "Papa", age: 3, animal: .Parrot, didShower: false, didPet: false))
-        animals.append(Animal(name: "Auau", age: 3, animal: .Dog, didShower: false, didPet: false))
+        animals.append(AnimalFactory.getAnimal(species: .dog, name: "Totó", age: 4))
     }
     
     func receiveAnimals(_ animals: [Animal]) {
@@ -59,23 +52,23 @@ class AnimalViewController: UIViewController {
         let animalChoice = UIAlertController(title: "Adicionar novo animal", message: "Qual animal?", preferredStyle: .actionSheet)
         let view = DetailAnimalViewController.instance
         let dogAction = UIAlertAction(title: "Cachorro", style: .default) { (alert) in
-            view.specie = .Dog
+            view.specie = .dog
             self.navigationController?.show(view, sender: nil)
         }
         let catAction = UIAlertAction(title: "Gato", style: .default) { (alert) in
-            view.specie = .Cat
+            view.specie = .cat
             self.navigationController?.show(view, sender: nil)
         }
         let parrotAction = UIAlertAction(title: "Papagaio", style: .default) { (alert) in
-            view.specie = .Parrot
+            view.specie = .parrot
             self.navigationController?.show(view, sender: nil)
         }
         let parakeetAction = UIAlertAction(title: "Periquito", style: .default) { (alert) in
-            view.specie = .Parekeet
+            view.specie = .parekeet
             self.navigationController?.show(view, sender: nil)
         }
         let ferretAction = UIAlertAction(title: "Furão", style: .default) { (alert) in
-            view.specie = .Ferret
+            view.specie = .ferret
             self.navigationController?.show(view, sender: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
@@ -90,20 +83,8 @@ class AnimalViewController: UIViewController {
     }
     
     @IBAction func callNextAnimalAction(_ sender: UIButton) {
-        guard let animal = animals.first else { return }
-        if animal.didPet && animal.didShower {
         animals.removeFirst()
-        }
     }
-    
-    @IBAction func seeCurrentAnimalAction(_ sender: UIBarButtonItem) {
-        guard let animal = animals.first else { return }
-        let currentAnimal = CurrentAnimalViewController.instance
-        currentAnimal.delegate = self
-        currentAnimal.animal = animal
-        self.navigationController?.show(currentAnimal, sender: nil)
-    }
-    
 }
 
 extension AnimalViewController: AnimalDelegate {
@@ -115,13 +96,5 @@ extension AnimalViewController: AnimalDelegate {
 extension AnimalViewController: DetailAnimalViewControllerDelegate {
     func addNewAnimal(_ DetailAnimalViewController: DetailAnimalViewController, animal: Animal){
         self.animals.append(animal)
-    }
-}
-
-extension AnimalViewController: CurrentAnimalViewControllerDelegate {
-    func getCurrentAnimal(_ currentAnimalViewController: CurrentAnimalViewController, animal: Animal) {
-        guard let index = self.animals.index(where: {$0.name == animal.name}) else { return }
-        self.animals[index] = animal
-        nextAnimalButton.isEnabled = true
     }
 }
